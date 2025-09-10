@@ -1,0 +1,184 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #0d47a1;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: #1565c0;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #0d47a1;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Navbar */
+nav a {
+  color: #f5f5f5;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #ffca28;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffca28;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Main Layout */
+main {
+  flex: 1;
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Profile Card */
+.profile-card {
+  background: #1976d2;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.foto-profil {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #ffca28;
+  margin-bottom: 15px;
+}
+
+.npm {
+  margin-top: 5px;
+  font-weight: bold;
+  color: #ffca28;
+}
+
+/* Table Section */
+.table-section {
+  background: #1976d2;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.table-section h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #0d47a1;
+  color: white;
+}
+
+/* Bio Card */
+.bio-card {
+  background: #1976d2;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 500px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bio-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.bio-card ul {
+  list-style: none;
+}
+
+.bio-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.bio-card li strong {
+  color: #ffca28;
+}
+
+/* Animasi masuk */
+.animate-in {
+  animation: fadeUp 0.7s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background: #1565c0;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
